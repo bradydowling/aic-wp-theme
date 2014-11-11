@@ -6,7 +6,7 @@
       <div class="container">
         <h1>Advance Eyecare</h1>
         <div class="row">
-            <p class="col-md-4 blurb">The first optometrists in the Ballantyne area, Advance Eyecare has been providing quality eyecare for years.</p>
+            <p class="col-md-4 blurb"><?php bloginfo('description'); ?><!-- The first optometrists in the Ballantyne area, Advance Eyecare has been providing quality eyecare for years. --></p>
         </div>
         <div class="row">
           <a href="#" class="btn btn-aic-primary first-button btn-lg col-md-2 col-xs-12" role="button">Schedule Us</a>
