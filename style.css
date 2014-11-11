@@ -1,0 +1,293 @@
+/*
+Theme Name: AIC Bootstrap
+Theme URI: http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial
+Description: A theme built primarily for the Advance Eyecare website, based off of the Bootstrap CSS framework.
+Author: Brady Dowling
+Author URI: http://bradydowling.github.io
+Version: 1.0
+Tags: responsive, white, bootstrap, optometry, landing page, local, business
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
+*/
+@import url('bootstrap/css/bootstrap.css');
+
+body {
+    padding-top: 50px;
+    /*background-color: #e8ebef;*/
+    font-family: 'Open Sans', Helvetica;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.jumbotron.first {
+    background-image: url("images/fieldgirl.jpg");
+    background-position: top;
+    color: #FFFFFF;
+}
+.jumbotron.second {
+    background-image: url('images/desk.jpg');
+}
+.jumbotron .btn.first-button {
+    margin-bottom: 10px;
+}
+.jumbotron .btn.last-button {
+    margin-bottom:50px;
+}
+.jumbotron h2 {
+    margin-top: 50px;
+}
+.jumbotron.first .blurb {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+.jumbotron.second .blurb {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.navbar .navbar-header .navbar-brand img {
+    max-height:43px;
+    margin-top: -14px;
+}
+section {
+    margin-top:100px;
+    margin-bottom:100px;
+}
+section h2 {
+    margin-top: 40px;
+}
+section img.margin {
+    margin-bottom: 40px;
+}
+footer.landing-footer {
+    background-color: #333333;
+    margin: 0;
+    color: #DDDDDD;
+    padding: 100px 40px 40px;
+    line-height: 80%;
+}
+
+/*
+Blues - primary
+#5f80cf - faded navy
+#3a62c1 - full navy
+
+Reds - secondary
+#9F0802 - deep red lipstick
+
+#FB4A4A - 10% lighter
+#e13030 - faded brick
+#D23A2C - 10% darker
+
+#D23A2C - red
+*/
+
+/* Generated at http://twbscolor.smarchal.com/ */
+.navbar-red {
+    /*background-color: #e8ebef;*/
+    background-color: #FFFFFF;
+    border: none;
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: none;
+    -webkit-box-shadow: 0px 2px 19px 0px rgba(100, 100, 100, 0.74);
+    -moz-box-shadow:    0px 2px 19px 0px rgba(100, 100, 100, 0.74);
+    box-shadow:         0px 2px 19px 0px rgba(100, 100, 100, 0.74);
+}
+.navbar-red .navbar-brand {
+    color: #000000;
+}
+.navbar-red .navbar-brand:hover, .navbar-red .navbar-brand:focus {
+    color: #000000;
+}
+.navbar-red .navbar-text {
+    color: #000000;
+}
+.navbar-red .navbar-nav > li > a {
+            transition: all 0.1s ease-in-out 0s;
+    -webkit-transition: all 0.1s ease-in-out 0s;
+    /* Do we want the above transition? Definitely want to change so it doesn't happen on the active one */
+    color: #000000;
+}
+.navbar-red .navbar-left > li:not(.current_page_item) > a:hover, .navbar-red .navbar-left > li:not(.current_page_item) > a:focus {
+    border-bottom: 5px solid #e13030;
+    padding-bottom:10px;
+    /*background-color: #e8ebef;*/
+    background-color: #FFFFFF;
+}
+
+/* Social Icons*/
+.social-icons li a {
+    min-width: 50px;
+    margin-left: 5px;
+}
+.navbar-right i {
+    color: #FFFFFF;
+}
+.navbar-right .facebook a {
+    background-color: #DDDDDD;
+}
+.navbar-right .facebook:hover a {
+    background-color: #3B5998;
+}
+.navbar-right .google-plus a {
+    background-color: #DDDDDD;
+}
+.navbar-right .google-plus:hover a {
+    background-color: #DD4B39;
+}
+.navbar-right .email a {
+    background-color: #DDDDDD;
+}
+.navbar-right .email:hover a {
+    background-color: #000000;
+}
+
+
+.navbar-red .navbar-nav > .current_page_item > a, .navbar-red .navbar-nav > .current_page_item > a:hover, .navbar-red .navbar-nav > .current_page_item > a:focus {
+    color: #ffffff;
+    background-color: #e13030;
+}
+.navbar-red .navbar-nav > .open > a, .navbar-red .navbar-nav > .open > a:hover, .navbar-red .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background-color: #e13030;
+}
+.navbar-red .navbar-toggle {
+    border-color: #e13030;
+}
+.navbar-red .navbar-toggle:hover, .navbar-red .navbar-toggle:focus {
+	background-color: #e13030;
+}
+.navbar-red .navbar-toggle .icon-bar {
+	background-color: #ffffff;
+}
+.navbar-red .navbar-collapse,
+.navbar-red .navbar-form {
+	border-color: #ffffff;
+}
+.navbar-red .navbar-link {
+	color: #ffffff;
+}
+.navbar-red .navbar-link:hover {
+	color: #ffffff;
+}
+
+@media (max-width: 767px) {
+	.navbar-red .navbar-nav .open .dropdown-menu > li > a {
+		color: #ffffff;
+	}
+	.navbar-red .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-red .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #ffffff;
+	}
+	.navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a, .navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a:hover, .navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a:focus {
+		color: #ffffff;
+		background-color: #e13030;
+	}
+}
+
+section p {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.btn-aic-primary {
+	background: #5f80cf;
+	background-image: none;
+	border-width: 0px 1px 3px;
+	border-color: #3a62c1;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: 600;
+	text-decoration: none ! important;
+	text-shadow: none;
+	transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+}
+.btn-aic-primary:hover {
+	background: #3a62c1;
+	color: #fff;
+}
+
+.btn-aic-light {
+	background: #B5B8BC;
+	background-image: none;
+	border-width: 0px 1px 3px;
+	border-color: #828589;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: 600;
+	text-decoration: none ! important;
+	text-shadow: none;
+	transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+}
+.btn-aic-light:hover {
+	background: #828589;
+	color: #fff;
+}
+
+.btn-aic-transparent-primary {
+    border: 2px solid #5f80cf;
+	background-image: none;
+	color: #5f80cf;
+	letter-spacing: 1px;
+	font-weight: 600;
+	text-decoration: none ! important;
+	text-shadow: none;
+	transition: all 0.2s ease-in-out 0s;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+}
+.btn-aic-transparent-primary:hover {
+        -moz-box-shadow:    inset 0 0 5px #5f80cf;
+        -webkit-box-shadow: inset 0 0 5px #5f80cf;
+        box-shadow:         inset 0 0 5px #5f80cf;
+        border-color: #3a62c1;
+	color: #3a62c1;
+	text-shadow: none;
+}
+
+.btn-aic-secondary {
+	background: #FB4A4A;
+	background-image: none;
+	border-width: 0px 1px 3px;
+	border-color: #D23A2C;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: 600;
+	text-decoration: none ! important;
+	text-shadow: none;
+	transition: all 0.2s ease-in-out 0s;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+}
+.btn-aic-secondary:hover {
+	background: #D23A2C;
+	color: #fff;
+}
+
+.btn-aic-transparent-secondary {
+    border: 2px solid #e13030;
+	background-image: none;
+	color: #e13030;
+	letter-spacing: 1px;
+	font-weight: 600;
+	text-decoration: none ! important;
+	text-shadow: none;
+	transition: all 0.2s ease-in-out 0s;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+}
+.btn-aic-transparent-secondary:hover {
+	-moz-box-shadow:    inset 0 0 5px #5f80cf;
+    -webkit-box-shadow: inset 0 0 5px #5f80cf;
+    box-shadow:         inset 0 0 5px #5f80cf;
+    border-color: #D23A2C;
+	color: #D23A2C;
+	text-shadow: none;
+}
+img.big-logo {
+    max-width: 100%;
+}
