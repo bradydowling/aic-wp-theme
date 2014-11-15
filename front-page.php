@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col-md-offset-1 col-md-10">
             <div class="col-md-6">
-            <img src="<?php echo get_bloginfo('template_url') ?>/images/sarit2.jpg" class="img-responsive img-rounded margin">
+            <img src="<?php echo get_bloginfo('template_url') ?>/images/sarit_award2.jpg" class="img-responsive img-rounded margin">
             </div>
             <div class="col-md-6">
                 <h2>Expertise You Can Trust</h2>
