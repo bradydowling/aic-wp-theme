@@ -37,7 +37,7 @@
     <div class="container">
         <div class="row col-md-offset-1 col-md-10">
             <div class="col-md-6 pull-right">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/aic_outside.png" class="img-responsive img-rounded margin">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/aic_outside.jpg" class="img-responsive img-rounded margin">
             </div>
             <div class="col-md-6">
                 <h2>Great Location</h2>
