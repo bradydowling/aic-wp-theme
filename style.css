@@ -1,7 +1,7 @@
 /*
-Theme Name: AIC Bootstrap
+Theme Name: Bootstrap Looks
 Theme URI: http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial
-Description: A theme built primarily for the Advance Eyecare website, based off of the Bootstrap CSS framework.
+Description: A theme built primarily for doctors and optometrists, based off of the Bootstrap CSS framework.
 Author: Brady Dowling
 Author URI: http://bradydowling.github.io
 Version: 1.0
@@ -16,7 +16,6 @@ This simple theme was built using the example Bootstrap theme "Basic marketing s
 
 body {
     padding-top: 50px;
-    /*background-color: #e8ebef;*/
     font-family: 'Open Sans', Helvetica;
 }
 
@@ -27,9 +26,7 @@ body {
     background-repeat: no-repeat;
 }
 .jumbotron.first {
-    background-image: url("images/fieldgirl.jpg");
     background-position: top;
-    color: #FFFFFF;
 }
 .jumbotron.second {
     background-image: url('images/desk.jpg');

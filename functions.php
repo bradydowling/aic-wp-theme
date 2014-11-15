@@ -9,6 +9,16 @@ function wpbootstrap_scripts_with_jquery()
 }
 add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'custom-background' );
+$defaults = array(
+	'default-image'          => get_template_directory_uri() . '/images/fieldgirl.jpg',
+	'flex-height'            => false,
+	'flex-width'             => false,
+	'uploads'                => true,
+	'random-default'         => false,
+	'header-text'            => true,
+);
+add_theme_support( 'custom-header', $defaults);
 
 add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 
