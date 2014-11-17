@@ -18,7 +18,7 @@
     </div>
   </header>
 
-  <section>
+  <!-- <section>
     <div class="container">
         <div class="row">
           <div class="col-md-offset-1 col-md-10">
@@ -33,31 +33,26 @@
           </div>
         </div>
     </div>
-  </section>
+  </section> -->
 
   <?php
   $post_limits = array(
-	'posts_per_page'   => 2,
-	'offset'           => 0,
-	'category'         => '',
-	'category_name'    => '', // This will be 'front-page' at some point.
-	'orderby'          => 'post_date',
-	'order'            => 'ASC',
-	'post_type'        => 'post',
-	'post_status'      => 'publish',
-	'suppress_filters' => true );
-	$posts_array = get_posts( $post_limits ); // probably use this var instead of the latest_blog_posts
-	
-  $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
+  	'posts_per_page'   => 2,
+  	'offset'           => 0,
+  	'category_name'    => '', // This will be 'front-page' at some point.
+  	'orderby'          => 'date',
+  	'order'            => 'ASC',
+  	'post_type'        => 'post',
+  	'post_status'      => 'publish',
+  	'suppress_filters' => true,
+	);
 
-  if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post();
-    // Loop output goes here
-  endwhile; endif;
-  if ( have_posts() ) {
+  $latest_blog_posts = new WP_Query($post_limits);
+
+  if ( $latest_blog_posts->have_posts() ) {
     $post_num = 1;
-  	while ( have_posts() && $post_num < 3) {
-  		//
-  		the_post();
+  	while ( $latest_blog_posts->have_posts() ) {
+  		$latest_blog_posts->the_post();
   ?>
   <section>
     <div class="container">
@@ -67,17 +62,17 @@
                 if ( has_post_thumbnail() ) {
                   $default_attr = array(
                   	'class' => "img-responsive img-rounded margin",
-                  	// need to actually have thumbnails on your posts
                   );
-                	the_post_thumbnail();
+                	the_post_thumbnail($default_attr);
                 }
-                ?>
+                else { ?>
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/aic_outside.jpg" class="img-responsive img-rounded margin">
+          <?php } ?>
             </div>
             <div class="col-md-6">
                 <h2><?php the_title(); ?></h2>
-                <p><?php the_content(); ?></p>
-                <a href="location" class="btn <?php if ($post_num % 2 == 0) {echo 'btn-aic-secondary';} else { echo 'btn-aic-primary';} ?> last-button btn-lg col-md-6 col-xs-12" role="button">See A Map</a>
+                <p><?php if (has_excerpt()) {the_excerpt();} else {the_content();} ?></p>
+                <a href="location" class="btn <?php if ($post_num % 2 == 0) {echo 'btn-aic-secondary';} else { echo 'btn-aic-primary';} ?> last-button btn-lg col-md-6 col-xs-12" role="button">See More</a>
             </div>
         </div>
     </div>
@@ -87,7 +82,7 @@
   	}
   }
 ?>
-  <section>
+  <!-- <section>
     <div class="container">
         <div class="row col-md-offset-1 col-md-10">
             <div class="col-md-6 pull-right">
@@ -100,7 +95,7 @@
             </div>
         </div>
     </div>
-  </section>
+  </section> -->
 
   <section>
     <div class="jumbotron second">
