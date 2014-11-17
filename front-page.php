@@ -72,7 +72,7 @@
             <div class="col-md-6">
                 <h2><?php the_title(); ?></h2>
                 <p><?php if (has_excerpt()) {the_excerpt();} else {the_content();} ?></p>
-                <a href="location" class="btn <?php if ($post_num % 2 == 0) {echo 'btn-aic-secondary';} else { echo 'btn-aic-primary';} ?> last-button btn-lg col-md-6 col-xs-12" role="button">See More</a>
+                <a href="<?php echo get_permalink(); ?>" class="btn <?php if ($post_num % 2 == 0) {echo 'btn-aic-secondary';} else { echo 'btn-aic-primary';} ?> last-button btn-lg col-md-6 col-xs-12" role="button">See More</a>
             </div>
         </div>
     </div>
