@@ -36,10 +36,11 @@
   </section> -->
 
   <?php
+  $desired_category = '';
   $post_limits = array(
   	'posts_per_page'   => 2,
   	'offset'           => 0,
-  	'category_name'    => '', // This will be 'front-page' at some point.
+  	'category_name'    => $desired_category,
   	'orderby'          => 'date',
   	'order'            => 'ASC',
   	'post_type'        => 'post',
