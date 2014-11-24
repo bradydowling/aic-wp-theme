@@ -29,4 +29,45 @@ function special_nav_class($classes, $item){
      return $classes;
 }
 
-?>
+
+
+function unblemished_customize_register( $wp_customize ) {
+   //All our sections, settings, and controls will be added here
+}
+add_action( 'customize_register', 'unblemished_customize_register' );
+
+$wp_customize->add_setting( 'unblemished_primary_color' , array(
+    'default'     => '#5F80CF',
+    'transport'   => 'refresh',
+) );
+
+$wp_customize->add_setting( 'unblemished_secondary_color' , array(
+    'default'     => '#FB4A4A',
+    'transport'   => 'refresh',
+) );
+
+$wp_customize->add_setting( 'unblemished_tertiary_color' , array(
+    'default'     => '#B5B8BC',
+    'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
+	'label'        => __( 'Theme Primary Color', 'unblemished' ),
+	'section'    => 'colors',
+	'settings'   => 'unblemished_primary_color',
+	'priority'   => 10,
+) ) );
+
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_color', array(
+	'label'        => __( 'Theme Secondary Color', 'unblemished' ),
+	'section'    => 'colors',
+	'settings'   => 'unblemished_secondary_color',
+	'priority'   => 11,
+) ) );
+
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'tertiary_color', array(
+	'label'        => __( 'Theme Tertiary (third) Color', 'unblemished' ),
+	'section'    => 'colors',
+	'settings'   => 'unblemished_tertiary_color',
+	'priority'   => 12,
+) ) );
