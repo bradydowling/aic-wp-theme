@@ -18,23 +18,6 @@
     </div>
   </header>
 
-  <!-- <section>
-    <div class="container">
-        <div class="row">
-          <div class="col-md-offset-1 col-md-10">
-            <div class="col-md-6">
-            <img src="<?php echo get_bloginfo('template_url') ?>/images/sarit_award2.jpg" class="img-responsive img-rounded margin">
-            </div>
-            <div class="col-md-6">
-                <h2>Expertise You Can Trust</h2>
-                <p>With over 50 years of combined experience, Advanced Eyecare has one of the most knowledgable staffs in the greater Charlotte area. Our doctors are not only experienced but also personable and dependable.</p>
-                <a href="staff" class="btn btn-aic-secondary last-button btn-lg col-md-6 col-xs-12" role="button">Meet Our Staff</a>
-            </div>
-          </div>
-        </div>
-    </div>
-  </section> -->
-
   <?php
   $desired_category = '';
   $post_limits = array(
@@ -83,27 +66,13 @@
   	}
   }
 ?>
-  <!-- <section>
-    <div class="container">
-        <div class="row col-md-offset-1 col-md-10">
-            <div class="col-md-6 pull-right">
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/aic_outside.jpg" class="img-responsive img-rounded margin">
-            </div>
-            <div class="col-md-6">
-                <h2>Great Location</h2>
-                <p>You can find us in the Ballantyne area in South Charlotte. After doubling the size of our office last year, we're ready for all the traffic the Charlotte area is throwing at us.</p>
-                <a href="location" class="btn btn-aic-primary last-button btn-lg col-md-6 col-xs-12" role="button">See A Map</a>
-            </div>
-        </div>
-    </div>
-  </section> -->
 
   <section>
     <div class="jumbotron second">
       <div class="container">
-          <h2>See Well, Look Good</h2>
+          <h2><?php echo get_theme_mod('unblemished_jumbotron_heading'); ?></h2>
           <div class="row">
-              <div class="col-md-4 blurb">With such a huge selection of frames, finding the right fit for you doesn’t have to take all day. Take a look at some of our brands and frames to get a jump on the selection process.</div>
+              <div class="col-md-4 blurb"><?php echo get_theme_mod('unblemished_jumbotron_content'); ?></div>
           </div>
           <div class="row">
               <a href="#" class="btn btn-aic-secondary last-button btn-lg col-md-2" role="button">Our Styles</a>

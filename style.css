@@ -193,7 +193,7 @@ section p {
 }
 
 .btn-aic-primary {
-	background: #5f80cf;
+	/*background: #5f80cf;*/
 	background-image: none;
 	border-width: 0px 1px 3px;
 	border-color: #3a62c1;
@@ -211,7 +211,7 @@ section p {
 }
 
 .btn-aic-light {
-	background: #B5B8BC;
+	/*background: #B5B8BC;*/
 	background-image: none;
 	border-width: 0px 1px 3px;
 	border-color: #828589;
