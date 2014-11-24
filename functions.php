@@ -36,6 +36,8 @@ function unblemished_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'unblemished_customize_register' );
 
+
+// Adding theme colors
 $wp_customize->add_setting( 'unblemished_primary_color' , array(
     'default'     => '#5F80CF',
     'transport'   => 'refresh',
@@ -70,4 +72,44 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'tert
 	'section'    => 'colors',
 	'settings'   => 'unblemished_tertiary_color',
 	'priority'   => 12,
+) ) );
+
+
+// Allowing changing of bottom jumbotron on front page
+$wp_customize->add_section( 'unblemished_second_jumbotron' , array(
+    'title'      => __( 'Bottom Jumbotron', 'unblemished' ),
+    'priority'   => 70,
+) );
+
+$wp_customize->add_setting( 'unblemished_jumbotron_heading' , array(
+    'default'     => 'My Heading',
+    'transport'   => 'refresh',
+) );
+
+$wp_customize->add_setting( 'unblemished_jumbotron_content' , array(
+    'default'     => 'Our product has been the number one of its kind for years.',
+    'transport'   => 'refresh',
+) );
+
+$wp_customize->add_setting( 'unblemished_jumbotron_background' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'jumbotron_2_heading', array(
+	'label'        => __( 'Heading/Title', 'unblemished' ),
+	'section'    => 'unblemished_second_jumbotron',
+	'settings'   => 'unblemished_jumbotron_heading',
+) ) );
+
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'jumbotron_2_content', array(
+	'label'        => __( 'Marketing Statement', 'unblemished' ),
+	'section'    => 'unblemished_second_jumbotron',
+	'settings'   => 'unblemished_jumbotron_content',
+) ) );
+
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'jumbotron_2_background', array(
+	'label'        => __( 'Background Image', 'unblemished' ),
+	'section'    => 'unblemished_second_jumbotron',
+	'settings'   => 'unblemished_jumbotron_background',
 ) ) );
