@@ -32,10 +32,26 @@ function special_nav_class($classes, $item){
 
 
 function unblemished_customize_register( $wp_customize ) {
-   //All custom Unblemished settings
-   // Adding theme colors
+	//All custom Unblemished settings
+	// Allowing changing of bottom jumbotron on front page
+	$wp_customize->add_section( 'unblemished_theme_settings' , array(
+	    'title'      => __( 'All Unblemished Theme Settings', 'unblemished' ),
+	    'priority'   => 70,
+	) );
+
+	// Adding theme colors
 	$wp_customize->add_setting( 'unblemished_primary_color' , array(
 	    'default'     => '#5F80CF',
+	    'transport'   => 'refresh',
+	) );
+	
+	$wp_customize->add_setting( 'unblemished_primary_color_border' , array(
+	    'default'     => '#3A62C1',
+	    'transport'   => 'refresh',
+	) );
+	
+	$wp_customize->add_setting( 'unblemished_primary_color_text' , array(
+	    'default'     => '#FFFFFF',
 	    'transport'   => 'refresh',
 	) );
 	
@@ -44,39 +60,96 @@ function unblemished_customize_register( $wp_customize ) {
 	    'transport'   => 'refresh',
 	) );
 	
+	$wp_customize->add_setting( 'unblemished_secondary_color_border' , array(
+	    'default'     => '#D23A2C',
+	    'transport'   => 'refresh',
+	) );
+	
+	$wp_customize->add_setting( 'unblemished_secondary_color_text' , array(
+	    'default'     => '#FFFFFF',
+	    'transport'   => 'refresh',
+	) );
+	
 	$wp_customize->add_setting( 'unblemished_tertiary_color' , array(
 	    'default'     => '#B5B8BC',
 	    'transport'   => 'refresh',
 	) );
 	
+	$wp_customize->add_setting( 'unblemished_tertiary_color_border' , array(
+	    'default'     => '#828589',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_setting( 'unblemished_tertiary_color_text' , array(
+	    'default'     => '#FFFFFF',
+	    'transport'   => 'refresh',
+	) );
+	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_primary_color', array(
-		'label'        => __( 'Theme Primary Color', 'unblemished' ),
-		'section'    => 'colors',
+		'label'      => __( 'Primary Color', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
 		'settings'   => 'unblemished_primary_color',
 		'priority'   => 10,
 	) ) );
-	
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_secondary_color', array(
-		'label'        => __( 'Theme Secondary Color', 'unblemished' ),
-		'section'    => 'colors',
-		'settings'   => 'unblemished_secondary_color',
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_primary_color_border', array(
+		'label'      => __( 'Primary Border/Hover Color', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
+		'settings'   => 'unblemished_primary_color_border',
 		'priority'   => 11,
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_primary_color_text', array(
+		'label'      => __( 'Primary (Button) Text Color', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
+		'settings'   => 'unblemished_primary_color_text',
+		'priority'   => 12,
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_secondary_color', array(
+		'label'      => __( 'Secondary Color', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
+		'settings'   => 'unblemished_secondary_color',
+		'priority'   => 13,
+	) ) );
+	
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_secondary_color_border', array(
+		'label'      => __( 'Secondary Border/Hover Color', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
+		'settings'   => 'unblemished_secondary_color_border',
+		'priority'   => 14,
+	) ) );
+	
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_secondary_color_text', array(
+		'label'      => __( 'Secondary (Button) Text Color', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
+		'settings'   => 'unblemished_secondary_color_text',
+		'priority'   => 15,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_tertiary_color', array(
-		'label'        => __( 'Theme Tertiary (third) Color', 'unblemished' ),
-		'section'    => 'colors',
+		'label'      => __( 'Tertiary Color', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
 		'settings'   => 'unblemished_tertiary_color',
-		'priority'   => 12,
+		'priority'   => 16,
 	) ) );
 	
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_tertiary_color_border', array(
+		'label'      => __( 'Tertiary Border/Hover Color', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
+		'settings'   => 'unblemished_tertiary_color_border',
+		'priority'   => 17,
+	) ) );
 	
-	// Allowing changing of bottom jumbotron on front page
-	$wp_customize->add_section( 'unblemished_second_jumbotron' , array(
-	    'title'      => __( 'Bottom Jumbotron', 'unblemished' ),
-	    'priority'   => 70,
-	) );
-	
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_tertiary_color_text', array(
+		'label'      => __( 'Tertiary (Button) Text Color', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
+		'settings'   => 'unblemished_tertiary_color_text',
+		'priority'   => 18,
+	) ) );
+
+
+	// Bottom Jumbotron text and background image
 	$wp_customize->add_setting( 'unblemished_jumbotron_heading' , array(
 	    'default'     => 'My Heading',
 	    'transport'   => 'refresh',
@@ -93,21 +166,24 @@ function unblemished_customize_register( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_jumbotron_heading', array(
-		'label'        => __( 'Heading/Title', 'unblemished' ),
-		'section'    => 'unblemished_second_jumbotron',
+		'label'      => __( 'Heading/Title', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
 		'settings'   => 'unblemished_jumbotron_heading',
+		'priority'   => 19,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_jumbotron_content', array(
-		'label'        => __( 'Marketing Statement', 'unblemished' ),
-		'section'    => 'unblemished_second_jumbotron',
+		'label'      => __( 'Marketing Statement', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
 		'settings'   => 'unblemished_jumbotron_content',
+		'priority'   => 20,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'unblemished_jumbotron_background', array(
-		'label'        => __( 'Background Image', 'unblemished' ),
-		'section'    => 'unblemished_second_jumbotron',
+		'label'      => __( 'Background Image', 'unblemished' ),
+		'section'    => 'unblemished_theme_settings',
 		'settings'   => 'unblemished_jumbotron_background',
+		'priority'   => 21,
 	) ) );
 }
 add_action( 'customize_register', 'unblemished_customize_register' );
@@ -116,10 +192,33 @@ function unblemished_customize_css()
 {
     ?>
     <style type="text/css">
-     	.btn-aic-primary {background:<?php echo get_theme_mod('unblemished_primary_color'); ?>;}
-     	.btn-aic-secondary {background:<?php echo get_theme_mod('unblemished_secondary_color'); ?>;}
-     	.btn-aic-light {background:<?php echo get_theme_mod('unblemished_tertiary_color'); ?>;}
-		/*.btn-aic-primary:hover {background: #3a62c1;}*/
+     	.btn-aic-primary {
+     		background:<?php echo get_theme_mod('unblemished_primary_color'); ?>;
+     		border-color:<?php echo get_theme_mod('unblemished_primary_color_border'); ?>;
+			color:<?php echo get_theme_mod('unblemished_primary_color_text'); ?>;
+     	}
+     	.btn-aic-primary:hover {
+			background:<?php echo get_theme_mod('unblemished_primary_color_border'); ?>;
+			color:<?php echo get_theme_mod('unblemished_primary_color_text'); ?>;
+		}
+     	.btn-aic-secondary {
+     		background:<?php echo get_theme_mod('unblemished_secondary_color'); ?>;
+     		border-color:<?php echo get_theme_mod('unblemished_secondary_color_border'); ?>;
+			color:<?php echo get_theme_mod('unblemished_secondary_color_text'); ?>;
+     	}
+     	.btn-aic-secondary:hover {
+			background:<?php echo get_theme_mod('unblemished_secondary_color_border'); ?>;
+			color:<?php echo get_theme_mod('unblemished_secondary_color_text'); ?>;
+		}
+     	.btn-aic-light {
+     		background:<?php echo get_theme_mod('unblemished_tertiary_color'); ?>;
+     		border-color:<?php echo get_theme_mod('unblemished_tertiary_color_border'); ?>;
+     		color:<?php echo get_theme_mod('unblemished_tertiary_color_text'); ?>;
+     	}
+     	.btn-aic-light:hover {
+			background:<?php echo get_theme_mod('unblemished_tertiary_color_border'); ?>;
+			color:<?php echo get_theme_mod('unblemished_tertiary_color_text'); ?>;
+		}
     </style>
     <?php
 }

@@ -70,22 +70,6 @@ footer.landing-footer {
     line-height: 80%;
 }
 
-/*
-Blues - primary
-#5f80cf - faded navy
-#3a62c1 - full navy
-
-Reds - secondary
-#9F0802 - deep red lipstick
-
-#FB4A4A - 10% lighter
-#e13030 - faded brick
-#D23A2C - 10% darker
-
-#D23A2C - red
-*/
-
-/* Generated at http://twbscolor.smarchal.com/ */
 .navbar-red {
     /*background-color: #e8ebef;*/
     background-color: #FFFFFF;
@@ -196,8 +180,8 @@ section p {
 	/*background: #5f80cf;*/
 	background-image: none;
 	border-width: 0px 1px 3px;
-	border-color: #3a62c1;
-	color: #fff;
+	/*border-color: #3a62c1;*/
+	/*color: #fff;*/
 	letter-spacing: 1px;
 	font-weight: 600;
 	text-decoration: none ! important;
@@ -206,16 +190,16 @@ section p {
 	-webkit-transition: all 0.3s ease-in-out 0s;
 }
 .btn-aic-primary:hover {
-	background: #3a62c1;
-	color: #fff;
+	/*background: #3a62c1;*/
+	/*color: #fff;*/
 }
 
 .btn-aic-light {
 	/*background: #B5B8BC;*/
 	background-image: none;
 	border-width: 0px 1px 3px;
-	border-color: #828589;
-	color: #fff;
+	/*border-color: #828589;*/
+	/*color: #fff;*/
 	letter-spacing: 1px;
 	font-weight: 600;
 	text-decoration: none ! important;
@@ -224,8 +208,8 @@ section p {
 	-webkit-transition: all 0.3s ease-in-out 0s;
 }
 .btn-aic-light:hover {
-	background: #828589;
-	color: #fff;
+	/*background: #828589;*/
+	/*color: #fff;*/
 }
 
 .btn-aic-transparent-primary {
@@ -249,11 +233,11 @@ section p {
 }
 
 .btn-aic-secondary {
-	background: #FB4A4A;
+	/*background: #FB4A4A;*/
 	background-image: none;
 	border-width: 0px 1px 3px;
-	border-color: #D23A2C;
-	color: #fff;
+	/*border-color: #D23A2C;*/
+	/*color: #fff;*/
 	letter-spacing: 1px;
 	font-weight: 600;
 	text-decoration: none ! important;
@@ -262,8 +246,8 @@ section p {
 	-webkit-transition: all 0.2s ease-in-out 0s;
 }
 .btn-aic-secondary:hover {
-	background: #D23A2C;
-	color: #fff;
+	/*background: #D23A2C;*/
+	/*color: #fff;*/
 }
 
 .btn-aic-transparent-secondary {
