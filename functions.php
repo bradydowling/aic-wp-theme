@@ -32,10 +32,9 @@ function special_nav_class($classes, $item){
 
 
 function unblemished_customize_register( $wp_customize ) {
-	//All custom Unblemished settings
-	// Allowing changing of bottom jumbotron on front page
-	$wp_customize->add_section( 'unblemished_theme_settings' , array(
-	    'title'      => __( 'All Unblemished Theme Settings', 'unblemished' ),
+	// Allowing changing of theme colors
+	$wp_customize->add_section( 'unblemished_color_settings' , array(
+	    'title'      => __( 'Unblemished Colors', 'unblemished' ),
 	    'priority'   => 70,
 	) );
 
@@ -87,68 +86,71 @@ function unblemished_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_primary_color', array(
 		'label'      => __( 'Primary Color', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_color_settings',
 		'settings'   => 'unblemished_primary_color',
 		'priority'   => 10,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_primary_color_border', array(
 		'label'      => __( 'Primary Border/Hover Color', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_color_settings',
 		'settings'   => 'unblemished_primary_color_border',
 		'priority'   => 11,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_primary_color_text', array(
 		'label'      => __( 'Primary (Button) Text Color', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_color_settings',
 		'settings'   => 'unblemished_primary_color_text',
 		'priority'   => 12,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_secondary_color', array(
 		'label'      => __( 'Secondary Color', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_color_settings',
 		'settings'   => 'unblemished_secondary_color',
 		'priority'   => 13,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_secondary_color_border', array(
 		'label'      => __( 'Secondary Border/Hover Color', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_color_settings',
 		'settings'   => 'unblemished_secondary_color_border',
 		'priority'   => 14,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_secondary_color_text', array(
 		'label'      => __( 'Secondary (Button) Text Color', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_color_settings',
 		'settings'   => 'unblemished_secondary_color_text',
 		'priority'   => 15,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_tertiary_color', array(
 		'label'      => __( 'Tertiary Color', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_color_settings',
 		'settings'   => 'unblemished_tertiary_color',
 		'priority'   => 16,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_tertiary_color_border', array(
 		'label'      => __( 'Tertiary Border/Hover Color', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_color_settings',
 		'settings'   => 'unblemished_tertiary_color_border',
 		'priority'   => 17,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_tertiary_color_text', array(
 		'label'      => __( 'Tertiary (Button) Text Color', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_color_settings',
 		'settings'   => 'unblemished_tertiary_color_text',
 		'priority'   => 18,
 	) ) );
 
-
+	$wp_customize->add_section( 'unblemished_front_page' , array(
+	    'title'      => __( 'Unblemished Front Page', 'unblemished' ),
+	    'priority'   => 80,
+	) );
 	// Bottom Jumbotron text and background image
 	$wp_customize->add_setting( 'unblemished_jumbotron_heading' , array(
 	    'default'     => 'My Heading',
@@ -167,21 +169,21 @@ function unblemished_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_jumbotron_heading', array(
 		'label'      => __( 'Heading/Title', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_front_page',
 		'settings'   => 'unblemished_jumbotron_heading',
 		'priority'   => 19,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_jumbotron_content', array(
 		'label'      => __( 'Marketing Statement', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_front_page',
 		'settings'   => 'unblemished_jumbotron_content',
 		'priority'   => 20,
 	) ) );
 	
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'unblemished_jumbotron_background', array(
 		'label'      => __( 'Background Image', 'unblemished' ),
-		'section'    => 'unblemished_theme_settings',
+		'section'    => 'unblemished_front_page',
 		'settings'   => 'unblemished_jumbotron_background',
 		'priority'   => 21,
 	) ) );
