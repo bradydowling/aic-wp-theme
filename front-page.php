@@ -19,11 +19,12 @@
   </header>
 
   <?php
-  $desired_category = '';
+  $post_category = '';
+  $post_num = 3;
   $post_limits = array(
-  	'posts_per_page'   => 2,
+  	'posts_per_page'   => $post_num,
   	'offset'           => 0,
-  	'category_name'    => $desired_category,
+  	'category_name'    => $post_category,
   	'orderby'          => 'date',
   	'order'            => 'ASC',
   	'post_type'        => 'post',

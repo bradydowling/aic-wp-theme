@@ -158,12 +158,17 @@ function unblemished_customize_register( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_setting( 'unblemished_jumbotron_content' , array(
-	    'default'     => 'Our product has been the number one of its kind for years.',
-	    'transport'   => 'refresh',
+		'default'     => 'Our product has been the number one of its kind for years.',
+		'transport'   => 'refresh',
 	) );
 	
 	$wp_customize->add_setting( 'unblemished_jumbotron_background' , array(
 	    'default'     => '',
+	    'transport'   => 'refresh',
+	) );
+	
+	$wp_customize->add_setting( 'unblemished_jumbotron_text_color' , array(
+	    'default'     => '#FFFFFF',
 	    'transport'   => 'refresh',
 	) );
 	
@@ -186,6 +191,13 @@ function unblemished_customize_register( $wp_customize ) {
 		'section'    => 'unblemished_front_page',
 		'settings'   => 'unblemished_jumbotron_background',
 		'priority'   => 21,
+	) ) );
+	
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_jumbotron_text_color', array(
+		'label'      => __( 'Jumbotron Text Color', 'unblemished' ),
+		'section'    => 'unblemished_front_page',
+		'settings'   => 'unblemished_jumbotron_text_color',
+		'priority'   => 22,
 	) ) );
 }
 add_action( 'customize_register', 'unblemished_customize_register' );
@@ -220,6 +232,9 @@ function unblemished_customize_css()
      	.btn-aic-light:hover {
 			background:<?php echo get_theme_mod('unblemished_tertiary_color_border'); ?>;
 			color:<?php echo get_theme_mod('unblemished_tertiary_color_text'); ?>;
+		}
+		.jumbotron.second {
+		    color:<?php echo get_theme_mod('unblemished_jumbotron_text_color'); ?>;
 		}
     </style>
     <?php
