@@ -57,7 +57,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
-                    <?php wp_list_pages(array('title_li' => '', 'post_type' => 'post')); ?>
+                    <?php wp_list_pages(array('title_li' => '')); ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right social-icons">
                     <li class="facebook"><a href="https://www.facebook.com/advanceicare"><i class="fa fa-facebook fa-lg"></i></a></li>
