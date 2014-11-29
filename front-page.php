@@ -21,7 +21,7 @@
   <section>
     <div class="container">
         <div class="row col-md-offset-1 col-md-10">
-            <div class="col-md-6 <?php echo get_theme_mod('unblemished_action_1_image_side'); ?>">
+            <div class="col-md-6 pull-<?php echo get_theme_mod('unblemished_action_1_image_side'); ?>">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/aic_outside.jpg" class="img-responsive img-rounded margin">
             </div>
             <div class="col-md-6">
