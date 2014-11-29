@@ -18,55 +18,50 @@
     </div>
   </header>
 
-  <?php
-  $post_category = '';
-  $post_num = 3;
-  $post_limits = array(
-  	'posts_per_page'   => $post_num,
-  	'offset'           => 0,
-  	'category_name'    => $post_category,
-  	'orderby'          => 'date',
-  	'order'            => 'ASC',
-  	'post_type'        => 'post',
-  	'post_status'      => 'publish',
-  	'suppress_filters' => true,
-	);
-
-  $latest_blog_posts = new WP_Query($post_limits);
-
-  if ( $latest_blog_posts->have_posts() ) {
-    $post_num = 1;
-  	while ( $latest_blog_posts->have_posts() ) {
-  		$latest_blog_posts->the_post();
-  ?>
   <section>
     <div class="container">
         <div class="row col-md-offset-1 col-md-10">
-            <div class="col-md-6 <?php if ($post_num % 2 == 0) {echo 'pull-right';} else { echo 'pull-left';} ?>">
-                <?php
-                if ( has_post_thumbnail() ) {
-                  $default_attr = array(
-                  	'class' => "img-responsive img-rounded margin",
-                  );
-                	the_post_thumbnail($default_attr);
-                }
-                else { ?>
+            <div class="col-md-6 <?php echo get_theme_mod('unblemished_action_1_image_side'); ?>">
                 <img src="<?php echo get_bloginfo('template_url') ?>/images/aic_outside.jpg" class="img-responsive img-rounded margin">
-          <?php } ?>
             </div>
             <div class="col-md-6">
-                <h2><?php the_title(); ?></h2>
-                <p><?php the_content(); ?></p>
-                <a href="<?php echo get_permalink(); ?>" class="btn <?php if ($post_num % 2 == 0) {echo 'btn-aic-secondary';} else { echo 'btn-aic-primary';} ?> last-button btn-lg col-md-6 col-xs-12" role="button"><?php if (has_excerpt()) {the_excerpt();} else {echo 'See More';} ?></a>
+                <h2><?php echo get_theme_mod('unblemished_action_1_header'); ?></h2>
+                <p><?php echo get_theme_mod('unblemished_action_1_content'); ?></p>
+                <a href="<?php echo '#nothing'; ?>" class="btn btn-aic-<?php echo get_theme_mod('unblemished_action_1_button_color'); ?> last-button btn-lg col-md-6 col-xs-12" role="button"><?php echo get_theme_mod('unblemished_action_1_button_text'); ?></a>
             </div>
         </div>
     </div>
   </section>
-  <?php
-  		$post_num++;
-  	}
-  }
-?>
+
+  <section>
+    <div class="container">
+        <div class="row col-md-offset-1 col-md-10">
+            <div class="col-md-6 pull-<?php echo get_theme_mod('unblemished_action_2_image_side'); ?>">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/aic_outside.jpg" class="img-responsive img-rounded margin">
+            </div>
+            <div class="col-md-6">
+                <h2><?php echo get_theme_mod('unblemished_action_2_header'); ?></h2>
+                <p><?php echo get_theme_mod('unblemished_action_2_content'); ?></p>
+                <a href="<?php echo '#nothing'; ?>" class="btn btn-aic-<?php echo get_theme_mod('unblemished_action_2_button_color'); ?> last-button btn-lg col-md-6 col-xs-12" role="button"><?php echo get_theme_mod('unblemished_action_2_button_text'); ?></a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+        <div class="row col-md-offset-1 col-md-10">
+            <div class="col-md-6 pull-<?php echo get_theme_mod('unblemished_action_3_image_side'); ?>">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/aic_outside.jpg" class="img-responsive img-rounded margin">
+            </div>
+            <div class="col-md-6">
+                <h2><?php echo get_theme_mod('unblemished_action_3_header'); ?></h2>
+                <p><?php echo get_theme_mod('unblemished_action_3_content'); ?></p>
+                <a href="<?php echo '#nothing'; ?>" class="btn btn-aic-<?php echo get_theme_mod('unblemished_action_3_button_color'); ?> last-button btn-lg col-md-6 col-xs-12" role="button"><?php echo get_theme_mod('unblemished_action_3_button_text'); ?></a>
+            </div>
+        </div>
+    </div>
+  </section>
 
   <section>
     <div class="jumbotron second">
@@ -85,9 +80,9 @@
   <section>
     <div class="text-center">
       <img src="<?php echo get_bloginfo('template_url') ?>/images/logo-thick-web.png" class="big-logo"/>
-      <h1>Advance Your Eyecare</h1>
-      <p>If you're ready to advance your eyecare then don't wait. Schedule an appointment today.</p>
-      <a href="#" class="btn btn-aic-primary btn-lg" role="button">Make an Appointment</a>
+      <h1><?php echo get_theme_mod('unblemished_final_section_header'); ?></h1>
+      <p><?php echo get_theme_mod('unblemished_final_section_tagline'); ?></p>
+      <a href="#" class="btn btn-aic-<?php echo get_theme_mod('unblemished_final_section_button_color'); ?> btn-lg" role="button"><?php echo get_theme_mod('unblemished_final_section_button_text'); ?></a>
     </div>
   </section>
 

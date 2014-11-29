@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function wpbootstrap_scripts_with_jquery()
 {
@@ -43,37 +43,37 @@ function unblemished_customize_register( $wp_customize ) {
 	    'default'     => '#5F80CF',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_setting( 'unblemished_primary_color_border' , array(
 	    'default'     => '#3A62C1',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_setting( 'unblemished_primary_color_text' , array(
 	    'default'     => '#FFFFFF',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_setting( 'unblemished_secondary_color' , array(
 	    'default'     => '#FB4A4A',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_setting( 'unblemished_secondary_color_border' , array(
 	    'default'     => '#D23A2C',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_setting( 'unblemished_secondary_color_text' , array(
 	    'default'     => '#FFFFFF',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_setting( 'unblemished_tertiary_color' , array(
 	    'default'     => '#B5B8BC',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_setting( 'unblemished_tertiary_color_border' , array(
 	    'default'     => '#828589',
 	    'transport'   => 'refresh',
@@ -83,120 +83,468 @@ function unblemished_customize_register( $wp_customize ) {
 	    'default'     => '#FFFFFF',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_primary_color', array(
 		'label'      => __( 'Primary Color', 'unblemished' ),
-		'section'    => 'unblemished_color_settings',
+		'section'    => 'colors',
 		'settings'   => 'unblemished_primary_color',
-		'priority'   => 10,
+		'priority'   => 20,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_primary_color_border', array(
 		'label'      => __( 'Primary Border/Hover Color', 'unblemished' ),
-		'section'    => 'unblemished_color_settings',
+		'section'    => 'colors',
 		'settings'   => 'unblemished_primary_color_border',
-		'priority'   => 11,
+		'priority'   => 21,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_primary_color_text', array(
 		'label'      => __( 'Primary (Button) Text Color', 'unblemished' ),
-		'section'    => 'unblemished_color_settings',
+		'section'    => 'colors',
 		'settings'   => 'unblemished_primary_color_text',
-		'priority'   => 12,
+		'priority'   => 22,
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_secondary_color', array(
 		'label'      => __( 'Secondary Color', 'unblemished' ),
-		'section'    => 'unblemished_color_settings',
+		'section'    => 'colors',
 		'settings'   => 'unblemished_secondary_color',
-		'priority'   => 13,
+		'priority'   => 23,
 	) ) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_secondary_color_border', array(
 		'label'      => __( 'Secondary Border/Hover Color', 'unblemished' ),
-		'section'    => 'unblemished_color_settings',
+		'section'    => 'colors',
 		'settings'   => 'unblemished_secondary_color_border',
-		'priority'   => 14,
+		'priority'   => 24,
 	) ) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_secondary_color_text', array(
 		'label'      => __( 'Secondary (Button) Text Color', 'unblemished' ),
-		'section'    => 'unblemished_color_settings',
+		'section'    => 'colors',
 		'settings'   => 'unblemished_secondary_color_text',
-		'priority'   => 15,
+		'priority'   => 25,
 	) ) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_tertiary_color', array(
 		'label'      => __( 'Tertiary Color', 'unblemished' ),
-		'section'    => 'unblemished_color_settings',
+		'section'    => 'colors',
 		'settings'   => 'unblemished_tertiary_color',
-		'priority'   => 16,
+		'priority'   => 26,
 	) ) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_tertiary_color_border', array(
 		'label'      => __( 'Tertiary Border/Hover Color', 'unblemished' ),
-		'section'    => 'unblemished_color_settings',
+		'section'    => 'colors',
 		'settings'   => 'unblemished_tertiary_color_border',
-		'priority'   => 17,
+		'priority'   => 27,
 	) ) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_tertiary_color_text', array(
 		'label'      => __( 'Tertiary (Button) Text Color', 'unblemished' ),
-		'section'    => 'unblemished_color_settings',
+		'section'    => 'colors',
 		'settings'   => 'unblemished_tertiary_color_text',
+		'priority'   => 28,
+	) ) );
+
+
+
+
+
+
+
+
+
+
+	// Stuff for first call to action.
+	$wp_customize->add_section( 'unblemished_action_item_1' , array(
+	    'title'      => __( 'Action Item 1', 'unblemished' ),
+	    'priority'   => 71,
+	) );
+
+	$wp_customize->add_setting( 'unblemished_action_1_header' , array(
+	    'default'     => 'Hello World',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_1_header', array(
+		'label'      => __( 'Header', 'unblemished' ),
+		'section'    => 'unblemished_action_item_1',
+		'settings'   => 'unblemished_action_1_header',
 		'priority'   => 18,
 	) ) );
 
-	$wp_customize->add_section( 'unblemished_front_page' , array(
-	    'title'      => __( 'Unblemished Front Page', 'unblemished' ),
-	    'priority'   => 80,
+	$wp_customize->add_setting( 'unblemished_action_1_content' , array(
+	    'default'     => 'Here is some content for your first action item.',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_1_content', array(
+		'label'      => __( 'Content', 'unblemished' ),
+		'section'    => 'unblemished_action_item_1',
+		'settings'   => 'unblemished_action_1_content',
+		'priority'   => 19,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_1_button_text' , array(
+	    'default'     => 'See More',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_1_button_text', array(
+		'label'      => __( 'Button Text', 'unblemished' ),
+		'section'    => 'unblemished_action_item_1',
+		'settings'   => 'unblemished_action_1_button_text',
+		'priority'   => 20,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_1_image_side' , array(
+	    'default'     => 'left',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_1_image_side', array(
+		'label'      => __( 'Image Side', 'unblemished' ),
+		'section'    => 'unblemished_action_item_1',
+		'settings'   => 'unblemished_action_1_image_side',
+		'type'     => 'radio',
+		'choices'  => array(
+			'left'  => 'Left',
+			'right' => 'Right',
+		),
+		'priority'   => 21,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_1_button_color' , array(
+	    'default'     => 'primary',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_1_button_color', array(
+		'label'      => __( 'Button Color', 'unblemished' ),
+		'section'    => 'unblemished_action_item_1',
+		'settings'   => 'unblemished_action_1_button_color',
+		'type'     => 'radio',
+		'choices'  => array(
+			'primary'  => 'Primary',
+			'secondary' => 'Secondary',
+			'light' => 'Tertiary',
+		),
+		'priority'   => 22,
+	) ) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Stuff for second call to action.
+	$wp_customize->add_section( 'unblemished_action_item_2' , array(
+	    'title'      => __( 'Action Item 2', 'unblemished' ),
+	    'priority'   => 72,
+	) );
+
+	$wp_customize->add_setting( 'unblemished_action_2_header' , array(
+	    'default'     => 'Hello World',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_2_header', array(
+		'label'      => __( 'Header', 'unblemished' ),
+		'section'    => 'unblemished_action_item_2',
+		'settings'   => 'unblemished_action_2_header',
+		'priority'   => 18,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_2_content' , array(
+	    'default'     => 'Here is some content for your first action item.',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_2_content', array(
+		'label'      => __( 'Content', 'unblemished' ),
+		'section'    => 'unblemished_action_item_2',
+		'settings'   => 'unblemished_action_2_content',
+		'priority'   => 19,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_2_button_text' , array(
+	    'default'     => 'See More',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_2_button_text', array(
+		'label'      => __( 'Button Text', 'unblemished' ),
+		'section'    => 'unblemished_action_item_2',
+		'settings'   => 'unblemished_action_2_button_text',
+		'priority'   => 20,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_2_image_side' , array(
+	    'default'     => 'right',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_2_image_side', array(
+		'label'      => __( 'Image Side', 'unblemished' ),
+		'section'    => 'unblemished_action_item_2',
+		'settings'   => 'unblemished_action_2_image_side',
+		'type'     => 'radio',
+		'choices'  => array(
+			'left'  => 'Left',
+			'right' => 'Right',
+		),
+		'priority'   => 21,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_2_button_color' , array(
+	    'default'     => 'secondary',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_2_button_color', array(
+		'label'      => __( 'Button Color', 'unblemished' ),
+		'section'    => 'unblemished_action_item_2',
+		'settings'   => 'unblemished_action_2_button_color',
+		'type'     => 'radio',
+		'choices'  => array(
+			'primary'  => 'Primary',
+			'secondary' => 'Secondary',
+			'light' => 'Tertiary',
+		),
+		'priority'   => 22,
+	) ) );
+
+
+
+
+
+
+
+
+
+
+
+	// Stuff for third call to action.
+	$wp_customize->add_section( 'unblemished_action_item_3' , array(
+	    'title'      => __( 'Action Item 3', 'unblemished' ),
+	    'priority'   => 73,
+	) );
+
+	$wp_customize->add_setting( 'unblemished_action_3_header' , array(
+	    'default'     => 'Hello World',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_3_header', array(
+		'label'      => __( 'Header', 'unblemished' ),
+		'section'    => 'unblemished_action_item_3',
+		'settings'   => 'unblemished_action_3_header',
+		'priority'   => 18,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_3_content' , array(
+	    'default'     => 'Here is some content for your first action item.',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_3_content', array(
+		'label'      => __( 'Content', 'unblemished' ),
+		'section'    => 'unblemished_action_item_3',
+		'settings'   => 'unblemished_action_3_content',
+		'priority'   => 19,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_3_button_text' , array(
+	    'default'     => 'See More',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_3_button_text', array(
+		'label'      => __( 'Button Text', 'unblemished' ),
+		'section'    => 'unblemished_action_item_3',
+		'settings'   => 'unblemished_action_3_button_text',
+		'priority'   => 20,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_3_image_side' , array(
+	    'default'     => 'left',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_3_image_side', array(
+		'label'      => __( 'Image Side', 'unblemished' ),
+		'section'    => 'unblemished_action_item_3',
+		'settings'   => 'unblemished_action_3_image_side',
+		'type'     => 'radio',
+		'choices'  => array(
+			'left'  => 'Left',
+			'right' => 'Right',
+		),
+		'priority'   => 21,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_action_3_button_color' , array(
+	    'default'     => 'primary',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_action_3_button_color', array(
+		'label'      => __( 'Button Color', 'unblemished' ),
+		'section'    => 'unblemished_action_item_3',
+		'settings'   => 'unblemished_action_3_button_color',
+		'type'     => 'radio',
+		'choices'  => array(
+			'primary'  => 'Primary',
+			'secondary' => 'Secondary',
+			'light' => 'Tertiary',
+		),
+		'priority'   => 22,
+	) ) );
+
+
+
+
+
+
+
+
+
+
+	$wp_customize->add_section( 'unblemished_bottom_jumbotron' , array(
+	    'title'      => __( 'Bottom Jumbotron', 'unblemished' ),
+	    'priority'   => 74,
 	) );
 	// Bottom Jumbotron text and background image
 	$wp_customize->add_setting( 'unblemished_jumbotron_heading' , array(
 	    'default'     => 'My Heading',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_setting( 'unblemished_jumbotron_content' , array(
 		'default'     => 'Our product has been the number one of its kind for years.',
 		'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_setting( 'unblemished_jumbotron_background' , array(
 	    'default'     => '',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_setting( 'unblemished_jumbotron_text_color' , array(
 	    'default'     => '#FFFFFF',
 	    'transport'   => 'refresh',
 	) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_jumbotron_heading', array(
 		'label'      => __( 'Heading/Title', 'unblemished' ),
-		'section'    => 'unblemished_front_page',
+		'section'    => 'unblemished_bottom_jumbotron',
 		'settings'   => 'unblemished_jumbotron_heading',
 		'priority'   => 19,
 	) ) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_jumbotron_content', array(
 		'label'      => __( 'Marketing Statement', 'unblemished' ),
-		'section'    => 'unblemished_front_page',
+		'section'    => 'unblemished_bottom_jumbotron',
 		'settings'   => 'unblemished_jumbotron_content',
 		'priority'   => 20,
 	) ) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'unblemished_jumbotron_background', array(
 		'label'      => __( 'Background Image', 'unblemished' ),
-		'section'    => 'unblemished_front_page',
+		'section'    => 'unblemished_bottom_jumbotron',
 		'settings'   => 'unblemished_jumbotron_background',
 		'priority'   => 21,
 	) ) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'unblemished_jumbotron_text_color', array(
 		'label'      => __( 'Jumbotron Text Color', 'unblemished' ),
-		'section'    => 'unblemished_front_page',
+		'section'    => 'unblemished_bottom_jumbotron',
 		'settings'   => 'unblemished_jumbotron_text_color',
+		'priority'   => 22,
+	) ) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Stuff for second call to action.
+	$wp_customize->add_section( 'unblemished_final_section' , array(
+	    'title'      => __( 'Final Section', 'unblemished' ),
+	    'priority'   => 75,
+	) );
+
+	$wp_customize->add_setting( 'unblemished_final_section_header' , array(
+	    'default'     => 'Hello World',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_final_section_header', array(
+		'label'      => __( 'Header', 'unblemished' ),
+		'section'    => 'unblemished_final_section',
+		'settings'   => 'unblemished_final_section_header',
+		'priority'   => 18,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_final_section_tagline' , array(
+	    'default'     => 'Here is a tagline, please buy the product already.',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_final_section_tagline', array(
+		'label'      => __( 'Tagline', 'unblemished' ),
+		'section'    => 'unblemished_final_section',
+		'settings'   => 'unblemished_final_section_tagline',
+		'priority'   => 19,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_final_section_button_text' , array(
+	    'default'     => 'See More',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_final_section_button_text', array(
+		'label'      => __( 'Button Text', 'unblemished' ),
+		'section'    => 'unblemished_final_section',
+		'settings'   => 'unblemished_final_section_button_text',
+		'priority'   => 20,
+	) ) );
+
+	$wp_customize->add_setting( 'unblemished_final_section_button_color' , array(
+	    'default'     => 'primary',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_final_section_button_color', array(
+		'label'      => __( 'Button Color', 'unblemished' ),
+		'section'    => 'unblemished_final_section',
+		'settings'   => 'unblemished_final_section_button_color',
+		'type'     => 'radio',
+		'choices'  => array(
+			'primary'  => 'Primary',
+			'secondary' => 'Secondary',
+			'light' => 'Tertiary',
+		),
 		'priority'   => 22,
 	) ) );
 }
