@@ -198,6 +198,18 @@ function unblemished_customize_register( $wp_customize ) {
 		'priority'   => 20,
 	) ) );
 
+	$wp_customize->add_setting( 'unblemished_action_1_image_source' , array(
+	    'default'     => 'fake_image_source_file.jpg',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo', array(
+       'label'      => __( 'Upload an image', 'unblemished' ),
+       'section'    => 'unblemished_action_item_1',
+       'settings'   => 'unblemished_action_1_image_source',
+       'priority'    => 21,
+    ) ) );
+
 	$wp_customize->add_setting( 'unblemished_action_1_image_side' , array(
 	    'default'     => 'left',
 	    'transport'   => 'refresh',
@@ -212,7 +224,7 @@ function unblemished_customize_register( $wp_customize ) {
 			'left'  => 'Left',
 			'right' => 'Right',
 		),
-		'priority'   => 21,
+		'priority'   => 22,
 	) ) );
 
 	$wp_customize->add_setting( 'unblemished_action_1_button_color' , array(
@@ -230,7 +242,7 @@ function unblemished_customize_register( $wp_customize ) {
 			'secondary' => 'Secondary',
 			'light' => 'Tertiary',
 		),
-		'priority'   => 22,
+		'priority'   => 23,
 	) ) );
 
 
@@ -288,6 +300,18 @@ function unblemished_customize_register( $wp_customize ) {
 		'priority'   => 20,
 	) ) );
 
+	$wp_customize->add_setting( 'unblemished_action_2_image_source' , array(
+	    'default'     => 'fake_image_source_file.jpg',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'unblemished_action_2_image_source', array(
+	   'label'      => __( 'Upload an image', 'unblemished' ),
+	   'section'    => 'unblemished_action_item_2',
+	   'settings'   => 'unblemished_action_2_image_source',
+       'priority'   => 21,
+    ) ) );
+
 	$wp_customize->add_setting( 'unblemished_action_2_image_side' , array(
 	    'default'     => 'right',
 	    'transport'   => 'refresh',
@@ -302,7 +326,7 @@ function unblemished_customize_register( $wp_customize ) {
 			'left'  => 'Left',
 			'right' => 'Right',
 		),
-		'priority'   => 21,
+		'priority'   => 22,
 	) ) );
 
 	$wp_customize->add_setting( 'unblemished_action_2_button_color' , array(
@@ -320,7 +344,7 @@ function unblemished_customize_register( $wp_customize ) {
 			'secondary' => 'Secondary',
 			'light' => 'Tertiary',
 		),
-		'priority'   => 22,
+		'priority'   => 23,
 	) ) );
 
 
@@ -375,6 +399,18 @@ function unblemished_customize_register( $wp_customize ) {
 		'priority'   => 20,
 	) ) );
 
+	$wp_customize->add_setting( 'unblemished_action_3_image_source' , array(
+	    'default'     => 'fake_image_source_3.jpg',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'unblemished_action_3_image_source', array(
+       'label'      => __( 'Upload an image', 'unblemished' ),
+       'section'    => 'unblemished_action_item_3',
+       'settings'   => 'unblemished_action_3_image_source',
+       'priority'   => 21,
+    ) ) );
+
 	$wp_customize->add_setting( 'unblemished_action_3_image_side' , array(
 	    'default'     => 'left',
 	    'transport'   => 'refresh',
@@ -389,7 +425,7 @@ function unblemished_customize_register( $wp_customize ) {
 			'left'  => 'Left',
 			'right' => 'Right',
 		),
-		'priority'   => 21,
+		'priority'   => 22,
 	) ) );
 
 	$wp_customize->add_setting( 'unblemished_action_3_button_color' , array(
@@ -407,7 +443,7 @@ function unblemished_customize_register( $wp_customize ) {
 			'secondary' => 'Secondary',
 			'light' => 'Tertiary',
 		),
-		'priority'   => 22,
+		'priority'   => 23,
 	) ) );
 
 
