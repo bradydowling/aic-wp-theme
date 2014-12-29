@@ -41,9 +41,9 @@
   <nav>
     <!-- Fixed navbar -->
     <div class="navbar navbar-red navbar-fixed-top" role="navigation">
-	<?php 
+	<?php
 	  // Fix menu overlap bug..
-	  if ( is_admin_bar_showing() ) echo '<div style="min-height: 28px;"></div>'; 
+	  if ( is_admin_bar_showing() ) echo '<div style="min-height: 28px;"></div>';
 	?>
         <div class="container">
             <div class="navbar-header">

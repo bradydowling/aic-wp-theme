@@ -151,6 +151,23 @@ function unblemished_customize_register( $wp_customize ) {
 
 
 
+	// Stuff for front page top jumbotron.
+	$wp_customize->add_setting( 'unblemished_top_jumbotron_button_left_link' , array(
+	    'default'     => '#',
+	    'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'unblemished_top_jumbotron_button_left_link', array(
+		'label'      => __( 'Left Button Link', 'unblemished' ),
+		'section'    => 'header_image',
+		'settings'   => 'unblemished_top_jumbotron_button_left_link',
+		'priority'   => 20,
+	) ) );
+
+
+
+
+
 
 
 
