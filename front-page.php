@@ -82,7 +82,7 @@
       <img src="<?php echo get_bloginfo('template_url') ?>/images/logo-thick-web.png" class="big-logo"/>
       <h1><?php echo get_theme_mod('unblemished_final_section_header'); ?></h1>
       <p><?php echo get_theme_mod('unblemished_final_section_tagline'); ?></p>
-      <a href="#" class="btn btn-aic-<?php echo get_theme_mod('unblemished_final_section_button_color'); ?> btn-lg" role="button"><?php echo get_theme_mod('unblemished_final_section_button_text'); ?></a>
+      <a href="http://www.demandforce.com/b/advanceicare/schedule" class="btn btn-aic-<?php echo get_theme_mod('unblemished_final_section_button_color'); ?> btn-lg" role="button"><?php echo get_theme_mod('unblemished_final_section_button_text'); ?></a>
     </div>
   </section>
 
