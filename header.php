@@ -61,7 +61,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right social-icons">
                     <li class="facebook"><a href="https://www.facebook.com/advanceicare"><i class="fa fa-facebook fa-lg"></i></a></li>
-                    <li class="google-plus"><a href="http://www.demandforce.com/b/advanceicare"><i class="fa fa-google-plus fa-lg"></i></a></li>
+                    <li class="google-plus"><a href="http://www.demandforce.com/b/advanceicare#business-profile-reviews"><i class="fa fa-users fa-lg"></i></a></li>
                     <li class="email"><a href="mailto:advanceicare@gmail.com"><i class="fa fa-envelope fa-lg"></i></a></li>
                 </ul>
             </div>

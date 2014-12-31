@@ -28,6 +28,10 @@ body {
 .jumbotron.first {
     background-position: top;
 }
+.jumbotron.page {
+    background-position: top;
+    height: 500px;
+}
 .jumbotron.second {
     background-image: url('images/desk.jpg');
 }

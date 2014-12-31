@@ -4,19 +4,18 @@
           <div class="row">
               <div class="col-sm-4">
                   <p><span class="glyphicon glyphicon-copyright-mark"></span> Copyright Advance Eyecare 2014</p>
-                  <p>704-752-1744</p>
               </div>
               <div class="col-sm-4">
-                  <p>Our Info:</p>
                   <p>Advance Eyecare</p>
                   <p>15235 John J Delaney Dr</p>
                   <p>Charlotte, NC 28277</p>
+                  <p></p>
+                  <p>704-752-1744</p>
               </div>
               <div class="col-sm-4">
                   <p>Our Partners:</p>
                   <p><a href="http://www.tlcvision.com/centers/charlotte/">TLC Charlotte LASIK</a></p>
                   <p><a href="http://www.uniteforsight.org/">Unite For Sight</a></p>
-                  <p><a href="#">Partner 3</a></p>
               </div>
           </div>
       <hr>

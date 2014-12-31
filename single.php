@@ -2,7 +2,7 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	            
+
 
   <article>
     <div class="container">
@@ -20,7 +20,7 @@
   </article>
 
 <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:' ), 'after' => '</div>' ) ); ?>
-	       
+
 	        <?php /*?>
 	        <?php edit_post_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
 	        <?php comments_template( '', true ); ?>
