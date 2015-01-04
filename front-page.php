@@ -4,7 +4,6 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <?php $header_textcolor = get_header_textcolor() ? : 'FFFFFF';?>
     <div class="jumbotron first" style="background-image:url(<?php header_image(); ?>); color:#<?=$header_textcolor?>;">
-      <img src="" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
       <div class="container">
         <h1>Advance Eyecare</h1>
         <div class="row">
