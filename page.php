@@ -12,7 +12,7 @@
   </div>
   <article>
     <div class="container">
-      <div class="row col-md-offset-1 col-md-10">
+      <div class="row col-md-offset-2 col-md-8">
         <h1 class="text-center"><?php the_title(); ?></h1>
           <?php the_content(); ?>
       </div>
