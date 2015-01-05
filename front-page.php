@@ -56,7 +56,7 @@
             <div class="col-md-6">
                 <h2><?php echo get_theme_mod('unblemished_action_3_header'); ?></h2>
                 <p><?php echo get_theme_mod('unblemished_action_3_content'); ?></p>
-                <a href="<?php echo '#nothing'; ?>" class="btn btn-aic-<?php echo get_theme_mod('unblemished_action_3_button_color'); ?> last-button btn-lg col-md-6 col-xs-12" role="button"><?php echo get_theme_mod('unblemished_action_3_button_text'); ?></a>
+                <a href="<?php echo 'services'; ?>" class="btn btn-aic-<?php echo get_theme_mod('unblemished_action_3_button_color'); ?> last-button btn-lg col-md-6 col-xs-12" role="button"><?php echo get_theme_mod('unblemished_action_3_button_text'); ?></a>
             </div>
         </div>
     </div>
@@ -70,7 +70,7 @@
               <div class="col-md-4 blurb"><?php echo get_theme_mod('unblemished_jumbotron_content'); ?></div>
           </div>
           <div class="row">
-              <a href="#" class="btn btn-aic-secondary last-button btn-lg col-md-2" role="button">Our Styles</a>
+              <a href="frames" class="btn btn-aic-secondary last-button btn-lg col-md-2" role="button">Our Styles</a>
           </div>
       </div>
     </div>
