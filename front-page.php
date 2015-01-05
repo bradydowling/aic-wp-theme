@@ -26,7 +26,7 @@
             <div class="col-md-6">
                 <h2><?php echo get_theme_mod('unblemished_action_1_header'); ?></h2>
                 <p><?php echo get_theme_mod('unblemished_action_1_content'); ?></p>
-                <a href="<?php echo get_page_link(2); ?>" class="btn btn-aic-<?php echo get_theme_mod('unblemished_action_1_button_color'); ?> last-button btn-lg col-md-6 col-xs-12" role="button"><?php echo get_theme_mod('unblemished_action_1_button_text'); ?></a>
+                <a href="<?php echo 'staff'; ?>" class="btn btn-aic-<?php echo get_theme_mod('unblemished_action_1_button_color'); ?> last-button btn-lg col-md-6 col-xs-12" role="button"><?php echo get_theme_mod('unblemished_action_1_button_text'); ?></a>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
             <div class="col-md-6">
                 <h2><?php echo get_theme_mod('unblemished_action_2_header'); ?></h2>
                 <p><?php echo get_theme_mod('unblemished_action_2_content'); ?></p>
-                <a href="<?php echo '#nothing'; ?>" class="btn btn-aic-<?php echo get_theme_mod('unblemished_action_2_button_color'); ?> last-button btn-lg col-md-6 col-xs-12" role="button"><?php echo get_theme_mod('unblemished_action_2_button_text'); ?></a>
+                <a href="<?php echo 'location'; ?>" class="btn btn-aic-<?php echo get_theme_mod('unblemished_action_2_button_color'); ?> last-button btn-lg col-md-6 col-xs-12" role="button"><?php echo get_theme_mod('unblemished_action_2_button_text'); ?></a>
             </div>
         </div>
     </div>

@@ -30,7 +30,7 @@ body {
 }
 .jumbotron.page {
     background-position: top;
-    height: 400px;
+    height: 300px;
 }
 .jumbotron.second {
     background-image: url('images/desk.jpg');
