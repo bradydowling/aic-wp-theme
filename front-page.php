@@ -11,7 +11,7 @@
         </div>
         <div class="row">
           <a href="<?php echo get_theme_mod('unblemished_top_jumbotron_button_left_link'); ?>" class="btn btn-aic-primary first-button btn-lg col-md-2 col-xs-12" role="button">Schedule Us</a>
-          <a href="forms" class="btn btn-aic-light last-button btn-lg col-md-offset-1 col-md-2 col-xs-12" role="button">Print Forms</a>
+          <a href="forms" class="btn btn-aic-light last-button btn-lg col-md-offset-1 col-md-2 col-xs-12" role="button">Patient Forms</a>
         </div>
       </div>
     </div>
