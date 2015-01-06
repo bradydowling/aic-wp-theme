@@ -116,14 +116,14 @@ footer.landing-footer {
 .navbar-right i {
     color: #FFFFFF;
 }
-.navbar-right .phone-number a {
+.nav > li.phone-number > a {
     background-color: #FFFFFF;
     color: #000000;
 }
-/*.navbar-right .phone-number:hover a {
-    background-color: #FFFFFF;
+.nav > li.phone-number > a:hover {
+    background-color: #FFFFFE;
     color: #000000;
-}*/
+}
 .navbar-right .facebook a {
     background-color: #DDDDDD;
 }
