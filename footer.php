@@ -7,7 +7,7 @@
               </div>
               <div class="col-sm-4">
                   <p>Advance Eyecare</p>
-                  <p>15235 John J Delaney Dr</p>
+                  <p>15235-H John J Delaney Dr</p>
                   <p>Charlotte, NC 28277</p>
                   <p></p>
                   <p>704-752-1744</p>
