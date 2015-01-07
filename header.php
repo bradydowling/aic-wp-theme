@@ -63,7 +63,6 @@
                     <li class="phone-number"><a>Call us at 704-752-1744</a></li>
                     <li class="facebook"><a href="https://www.facebook.com/advanceicare"><i class="fa fa-facebook fa-lg"></i></a></li>
                     <li class="google-plus"><a href="http://www.demandforce.com/b/advanceicare#business-profile-reviews"><i class="fa fa-users fa-lg"></i></a></li>
-                    <li class="email"><a href="mailto:advanceicare@gmail.com"><i class="fa fa-envelope fa-lg"></i></a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->

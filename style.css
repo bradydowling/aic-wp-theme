@@ -136,12 +136,6 @@ footer.landing-footer {
 .navbar-right .google-plus:hover a {
     background-color: #DD4B39;
 }
-.navbar-right .email a {
-    background-color: #DDDDDD;
-}
-.navbar-right .email:hover a {
-    background-color: #000000;
-}
 
 
 .navbar-red .navbar-nav > .current_page_item > a, .navbar-red .navbar-nav > .current_page_item > a:hover, .navbar-red .navbar-nav > .current_page_item > a:focus {
