@@ -15,7 +15,7 @@
               <div class="col-sm-4">
                   <p>Our Partners:</p>
                   <p><a href="http://www.tlcvision.com/centers/charlotte/">TLC Charlotte LASIK</a></p>
-                  <p><a href="http://www.uniteforsight.org/">Unite For Sight</a></p>
+                  <p><a href="http://www.lionsinsight.org/">Lions in Sight</a></p>
               </div>
           </div>
       <hr>
