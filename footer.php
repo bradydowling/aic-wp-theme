@@ -3,7 +3,7 @@
       <div class="container">
           <div class="row">
               <div class="col-sm-4">
-                  <p><span class="glyphicon glyphicon-copyright-mark"></span> Copyright Advance Eyecare 2014</p>
+                  <p><span class="glyphicon glyphicon-copyright-mark"></span> Copyright Advance Eyecare <?php echo date("Y"); ?></p>
               </div>
               <div class="col-sm-4">
                   <p>Advance Eyecare</p>
