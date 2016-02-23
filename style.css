@@ -12,8 +12,8 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 
 This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
 */
-@import url('bootstrap/css/bootstrap.css');
 
+@import url('bootstrap/css/bootstrap.css');
 body {
     padding-top: 50px;
     font-family: 'Open Sans', Helvetica;
@@ -25,51 +25,65 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .jumbotron.first {
     background-position: top;
 }
+
 .jumbotron.page {
     background-position: top;
     height: 300px;
 }
+
 .jumbotron.second {
     background-image: url('images/desk.jpg');
 }
+
 .jumbotron .btn.first-button {
     margin-bottom: 10px;
 }
+
 .jumbotron .btn.last-button {
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
+
 .jumbotron h2 {
     margin-top: 50px;
 }
+
 .jumbotron.first .blurb {
     margin-top: 25px;
     margin-bottom: 40px;
 }
+
 .jumbotron.second .blurb {
     margin-top: 20px;
     margin-bottom: 30px;
 }
+
 .navbar .navbar-header .navbar-brand img {
-    max-height:43px;
+    max-height: 43px;
     margin-top: -14px;
 }
+
 section {
-    margin-top:100px;
-    margin-bottom:100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
+
 article {
-    margin-top:50px;
-    margin-bottom:70px;
+    margin-top: 50px;
+    margin-bottom: 70px;
 }
+
 section h2 {
     margin-top: 40px;
 }
+
 section img.margin {
     margin-bottom: 40px;
 }
+
 footer.landing-footer {
     background-color: #333333;
     margin: 0;
@@ -84,180 +98,243 @@ footer.landing-footer {
     font-family: 'Varela Round', sans-serif;
     text-decoration: none;
     -webkit-box-shadow: 0px 2px 19px 0px rgba(100, 100, 100, 0.74);
-    -moz-box-shadow:    0px 2px 19px 0px rgba(100, 100, 100, 0.74);
-    box-shadow:         0px 2px 19px 0px rgba(100, 100, 100, 0.74);
+    -moz-box-shadow: 0px 2px 19px 0px rgba(100, 100, 100, 0.74);
+    box-shadow: 0px 2px 19px 0px rgba(100, 100, 100, 0.74);
 }
+
 .navbar-red .navbar-brand {
     color: #000000;
 }
-.navbar-red .navbar-brand:hover, .navbar-red .navbar-brand:focus {
+
+.navbar-red .navbar-brand:hover,
+.navbar-red .navbar-brand:focus {
     color: #000000;
 }
+
 .navbar-red .navbar-text {
     color: #000000;
 }
+
 .navbar-red .navbar-nav > li > a {
-            transition: all 0.1s ease-in-out 0s;
+    transition: all 0.1s ease-in-out 0s;
     -webkit-transition: all 0.1s ease-in-out 0s;
     /* Do we want the above transition? Definitely want to change so it doesn't happen on the active one */
     color: #000000;
 }
-.navbar-red .navbar-left > li:not(.current_page_item) > a:hover, .navbar-red .navbar-left > li:not(.current_page_item) > a:focus {
+
+.navbar-red .navbar-left > li:not(.current_page_item) > a:hover,
+.navbar-red .navbar-left > li:not(.current_page_item) > a:focus {
     border-bottom: 5px solid #e13030;
-    padding-bottom:10px;
+    padding-bottom: 10px;
     background-color: #FFFFFF;
 }
 
+
 /* Social Icons*/
+
 .social-icons li a {
     min-width: 50px;
     margin-left: 5px;
 }
+
 .navbar-right i {
     color: #FFFFFF;
 }
+
 .nav > li.phone-number > a {
     background-color: #FFFFFF;
     color: #000000;
 }
+
 .nav > li.phone-number > a:hover {
     background-color: #FFFFFE;
     color: #000000;
 }
+
 .navbar-right .facebook a {
     background-color: #DDDDDD;
 }
+
 .navbar-right .facebook:hover a {
     background-color: #3B5998;
 }
+
 .navbar-right .google-plus a {
     background-color: #DDDDDD;
 }
+
 .navbar-right .google-plus:hover a {
     background-color: #DD4B39;
 }
 
+.navbar-red .navbar-nav > .current_page_item > a,
+.navbar-red .navbar-nav > .current_page_item > a:hover,
+.navbar-red .navbar-nav > .current_page_item > a:focus {
+    color: #ffffff;
+    background-color: #e13030;
+}
 
-.navbar-red .navbar-nav > .current_page_item > a, .navbar-red .navbar-nav > .current_page_item > a:hover, .navbar-red .navbar-nav > .current_page_item > a:focus {
+.navbar-red .navbar-nav > .open > a,
+.navbar-red .navbar-nav > .open > a:hover,
+.navbar-red .navbar-nav > .open > a:focus {
     color: #ffffff;
     background-color: #e13030;
 }
-.navbar-red .navbar-nav > .open > a, .navbar-red .navbar-nav > .open > a:hover, .navbar-red .navbar-nav > .open > a:focus {
-    color: #ffffff;
-    background-color: #e13030;
-}
+
 .navbar-red .navbar-toggle {
     border-color: #e13030;
 }
-.navbar-red .navbar-toggle:hover, .navbar-red .navbar-toggle:focus {
-	background-color: #e13030;
+
+.navbar-red .navbar-toggle:hover,
+.navbar-red .navbar-toggle:focus {
+    background-color: #e13030;
 }
+
 .navbar-red .navbar-toggle .icon-bar {
-	background-color: #ffffff;
+    background-color: #ffffff;
 }
+
 .navbar-red .navbar-collapse,
 .navbar-red .navbar-form {
-	border-color: #ffffff;
+    border-color: #ffffff;
 }
+
 .navbar-red .navbar-link {
-	color: #ffffff;
+    color: #ffffff;
 }
+
 .navbar-red .navbar-link:hover {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 @media (max-width: 767px) {
-	.navbar-red .navbar-nav .open .dropdown-menu > li > a {
-		color: #ffffff;
-	}
-	.navbar-red .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-red .navbar-nav .open .dropdown-menu > li > a:focus {
-		color: #ffffff;
-	}
-	.navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a, .navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a:hover, .navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a:focus {
-		color: #ffffff;
-		background-color: #e13030;
-	}
+    .navbar-red .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffffff;
+    }
+    .navbar-red .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-red .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ffffff;
+    }
+    .navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a,
+    .navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a:hover,
+    .navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a:focus {
+        color: #ffffff;
+        background-color: #e13030;
+    }
 }
 
 section p {
-	margin-top: 20px;
-	margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .btn-aic-primary {
-	background-image: none;
-	border-width: 0px 1px 3px;
-	letter-spacing: 1px;
-	font-weight: 600;
-	text-decoration: none ! important;
-	text-shadow: none;
-	transition: all 0.3s ease-in-out 0s;
-	-webkit-transition: all 0.3s ease-in-out 0s;
+    background-image: none;
+    border-width: 0px 1px 3px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none ! important;
+    text-shadow: none;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
 }
 
 .btn-aic-light {
-	background-image: none;
-	border-width: 0px 1px 3px;
-	letter-spacing: 1px;
-	font-weight: 600;
-	text-decoration: none ! important;
-	text-shadow: none;
-	transition: all 0.3s ease-in-out 0s;
-	-webkit-transition: all 0.3s ease-in-out 0s;
+    background-image: none;
+    border-width: 0px 1px 3px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none ! important;
+    text-shadow: none;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
 }
 
 .btn-aic-transparent-primary {
     border: 2px solid;
-    border-color:  #5f80cf;
-	background-image: none;
-	color: #5f80cf;
-	letter-spacing: 1px;
-	font-weight: 600;
-	text-decoration: none ! important;
-	text-shadow: none;
-	transition: all 0.2s ease-in-out 0s;
-	-webkit-transition: all 0.2s ease-in-out 0s;
+    border-color: #5f80cf;
+    background-image: none;
+    color: #5f80cf;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none ! important;
+    text-shadow: none;
+    transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
 }
+
 .btn-aic-transparent-primary:hover {
-    -moz-box-shadow:    inset 0 0 5px #5f80cf;
+    -moz-box-shadow: inset 0 0 5px #5f80cf;
     -webkit-box-shadow: inset 0 0 5px #5f80cf;
-    box-shadow:         inset 0 0 5px #5f80cf;
+    box-shadow: inset 0 0 5px #5f80cf;
     border-color: #3a62c1;
-	color: #3a62c1;
-	text-shadow: none;
+    color: #3a62c1;
+    text-shadow: none;
 }
 
 .btn-aic-secondary {
-	background-image: none;
-	border-width: 0px 1px 3px;
-	letter-spacing: 1px;
-	font-weight: 600;
-	text-decoration: none ! important;
-	text-shadow: none;
-	transition: all 0.2s ease-in-out 0s;
-	-webkit-transition: all 0.2s ease-in-out 0s;
+    background-image: none;
+    border-width: 0px 1px 3px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none ! important;
+    text-shadow: none;
+    transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
 }
 
 .btn-aic-transparent-secondary {
     border: 2px solid;
     border-color: #e13030;
-	background-image: none;
-	color: #e13030;
-	letter-spacing: 1px;
-	font-weight: 600;
-	text-decoration: none ! important;
-	text-shadow: none;
-	transition: all 0.2s ease-in-out 0s;
-	-webkit-transition: all 0.2s ease-in-out 0s;
+    background-image: none;
+    color: #e13030;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none ! important;
+    text-shadow: none;
+    transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
 }
+
 .btn-aic-transparent-secondary:hover {
-	-moz-box-shadow:    inset 0 0 5px #5f80cf;
+    -moz-box-shadow: inset 0 0 5px #5f80cf;
     -webkit-box-shadow: inset 0 0 5px #5f80cf;
-    box-shadow:         inset 0 0 5px #5f80cf;
+    box-shadow: inset 0 0 5px #5f80cf;
     border-color: #D23A2C;
-	color: #D23A2C;
-	text-shadow: none;
+    color: #D23A2C;
+    text-shadow: none;
 }
+
 .big-logo {
     max-width: 100%;
+}
+
+img.alignright {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+img.alignleft {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignright {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

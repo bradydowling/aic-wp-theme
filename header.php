@@ -58,6 +58,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
                     <?php wp_list_pages(array('title_li' => '')); ?>
+                    <li><a href="http://www.e-dr.com/advanceicare">Order Contact Lenses</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right social-icons">
                     <li class="phone-number"><a>Call us at 704-752-1744</a></li>
