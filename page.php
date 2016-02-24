@@ -13,7 +13,14 @@
   <article>
     <div class="container">
       <div class="row col-md-offset-2 col-md-8">
-        <h1 class="text-center"><?php the_title(); ?></h1>
+        <h1 class="text-center"><?php 
+          if (get_post_custom_values('page title')[0]) {
+            echo get_post_custom_values('page title')[0]; 
+          }
+          else {
+            the_title();
+          }
+        ?></h1>
           <?php the_content(); ?>
       </div>
     </div>
