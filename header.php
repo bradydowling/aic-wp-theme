@@ -56,10 +56,20 @@
                 <a class="navbar-brand" href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/logo.png" alt="advance eyecare logo"><?php echo bloginfo('name'); ?></a>
             </div>
             <div class="navbar-collapse collapse">
+                <?php
+                    if ( has_nav_menu( 'primary' ) ) {
+                        wp_nav_menu( array( 
+                            'container' => false,
+                            'menu_class' => 'nav navbar-nav navbar-left',
+                            'theme_location' => 'primary'
+                        ) );
+                    }
+                    else {
+                ?>
                 <ul class="nav navbar-nav navbar-left">
                     <?php wp_list_pages(array('title_li' => '')); ?>
-                    <li><a href="http://www.e-dr.com/advanceicare">Order Contact Lenses</a></li>
                 </ul>
+                <?php } ?>
                 <ul class="nav navbar-nav navbar-right social-icons">
                     <li class="phone-number"><a>Call us at 704-752-1744</a></li>
                     <li class="facebook"><a href="https://www.facebook.com/advanceicare"><i class="fa fa-facebook fa-lg"></i></a></li>

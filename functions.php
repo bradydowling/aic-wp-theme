@@ -29,6 +29,11 @@ function special_nav_class($classes, $item){
      return $classes;
 }
 
+function register_my_menu() {
+  register_nav_menu('primary',__( 'Primary Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
+
 
 
 function unblemished_customize_register( $wp_customize ) {
