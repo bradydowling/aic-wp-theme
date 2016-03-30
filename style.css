@@ -28,6 +28,10 @@ iframe, object, embed {
     margin-right: 30px;
 }
 
+iframe + div {
+    display: none;
+}
+
 .jumbotron {
     margin-bottom: 0px;
     background-size: cover;
