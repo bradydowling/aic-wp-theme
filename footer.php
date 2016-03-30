@@ -31,9 +31,5 @@
     <!-- <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.js"></script> -->
     <?php wp_footer(); ?>
-    <script>
-      $('.menu-item-has-children').addClass('dropdown'); 
-    </script>
-
   </body>
 </html>

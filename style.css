@@ -19,6 +19,15 @@ body {
     font-family: 'Open Sans', Helvetica;
 }
 
+/* Demandforce form styling */
+iframe, object, embed {
+    max-width: none !important;
+}
+
+.same-row {
+    margin-right: 30px;
+}
+
 .jumbotron {
     margin-bottom: 0px;
     background-size: cover;

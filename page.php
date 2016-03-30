@@ -15,6 +15,12 @@
       <div class="row col-md-offset-2 col-md-8">
         <h1 class="text-center"><?php the_title(); ?></h1>
           <?php the_content(); ?>
+        <script type="text/javascript">
+          d3cp_bid = '135001619';
+          d3cp_appt_source = 'advanceicare.com';
+          d3cp_appt_returnpage = 'http://advanceicare.com';
+        </script>
+        <script src="//www.demandforced3.com/b/advanceicare/scheduler.widget" type="text/javascript"></script>
       </div>
     </div>
   </article>

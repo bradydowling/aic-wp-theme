@@ -5,6 +5,7 @@
     <title><?php if (is_front_page()) {echo bloginfo('name');} else {echo get_the_title();} ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link type="text/css" rel="stylesheet" href="//www.demandforce.com/widget/css/widget.css" />
     <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -54,19 +55,6 @@
                     <li><a><i class="fa fa-phone fa-lg"></i> 704-752-1744</a></li>
                 </ul>
             </div>
-        <!--<?php
-            wp_nav_menu( array(
-                'menu'              => 'primary',
-                'theme_location'    => 'primary',
-                'depth'             => 2,
-                'container'         => 'div',
-                'container_class'   => 'collapse navbar-collapse',
-                'container_id'      => 'bs-example-navbar-collapse-1',
-                'menu_class'        => 'nav navbar-nav',
-                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                'walker'            => new wp_bootstrap_navwalker())
-            );
-        ?>-->
         </div>
     </div>
   </nav>
