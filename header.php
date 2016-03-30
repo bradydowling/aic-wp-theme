@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link type="text/css" rel="stylesheet" href="//www.demandforce.com/widget/css/widget.css" />
+    <link type="text/css" rel="stylesheet" href="style-widget.css" />
     <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">

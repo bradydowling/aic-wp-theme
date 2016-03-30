@@ -24,12 +24,8 @@ iframe, object, embed {
     max-width: none !important;
 }
 
-.same-row {
-    margin-right: 30px;
-}
-
 iframe + div {
-    display: none;
+    display: none !important;
 }
 
 .jumbotron {
