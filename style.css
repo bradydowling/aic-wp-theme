@@ -102,123 +102,59 @@ footer.landing-footer {
     box-shadow: 0px 2px 19px 0px rgba(100, 100, 100, 0.74);
 }
 
-.navbar-red .navbar-brand {
-    color: #000000;
-}
-
+.navbar-red .navbar-brand,
 .navbar-red .navbar-brand:hover,
-.navbar-red .navbar-brand:focus {
-    color: #000000;
-}
-
-.navbar-red .navbar-text {
-    color: #000000;
-}
-
+.navbar-red .navbar-brand:focus,
+.navbar-red .navbar-text,
 .navbar-red .navbar-nav > li > a {
-    transition: all 0.1s ease-in-out 0s;
-    -webkit-transition: all 0.1s ease-in-out 0s;
-    /* Do we want the above transition? Definitely want to change so it doesn't happen on the active one */
     color: #000000;
 }
 
-.navbar-red .navbar-left > li:not(.current_page_item) > a:hover,
-.navbar-red .navbar-left > li:not(.current_page_item) > a:focus {
-    border-bottom: 5px solid #e13030;
-    padding-bottom: 10px;
-    background-color: #FFFFFF;
-}
-
-
-/* Social Icons*/
-
-.social-icons li a {
-    min-width: 50px;
-    margin-left: 5px;
-}
-
-.navbar-right i {
-    color: #FFFFFF;
-}
-
-.nav > li.phone-number > a {
+.navbar-right .fa-phone, .navbar-right li a:hover {
     background-color: #FFFFFF;
     color: #000000;
-}
-
-.nav > li.phone-number > a:hover {
-    background-color: #FFFFFE;
-    color: #000000;
-}
-
-.navbar-right .facebook a {
-    background-color: #DDDDDD;
-}
-
-.navbar-right .facebook:hover a {
-    background-color: #3B5998;
-}
-
-.navbar-right .google-plus a {
-    background-color: #DDDDDD;
-}
-
-.navbar-right .google-plus:hover a {
-    background-color: #DD4B39;
 }
 
 .navbar-red .navbar-nav > .current_page_item > a,
 .navbar-red .navbar-nav > .current_page_item > a:hover,
 .navbar-red .navbar-nav > .current_page_item > a:focus {
-    color: #ffffff;
-    background-color: #e13030;
+    color: #FFFFFF;
+    background-color: #E13030;
 }
 
-.navbar-red .navbar-nav > .open > a,
-.navbar-red .navbar-nav > .open > a:hover,
-.navbar-red .navbar-nav > .open > a:focus {
-    color: #ffffff;
-    background-color: #e13030;
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
-.navbar-red .navbar-toggle {
-    border-color: #e13030;
-}
-
+.navbar-red .navbar-toggle,
 .navbar-red .navbar-toggle:hover,
 .navbar-red .navbar-toggle:focus {
-    background-color: #e13030;
+    border-color: #E13030;
 }
 
-.navbar-red .navbar-toggle .icon-bar {
-    background-color: #ffffff;
-}
-
+.navbar-red .navbar-toggle .icon-bar,
 .navbar-red .navbar-collapse,
 .navbar-red .navbar-form {
-    border-color: #ffffff;
+    background-color: #FFFFFF;
 }
 
-.navbar-red .navbar-link {
-    color: #ffffff;
-}
-
+.navbar-red .navbar-link,
 .navbar-red .navbar-link:hover {
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 @media (max-width: 767px) {
     .navbar-red .navbar-nav .open .dropdown-menu > li > a {
-        color: #ffffff;
+        color: #FFFFFF;
     }
     .navbar-red .navbar-nav .open .dropdown-menu > li > a:hover,
     .navbar-red .navbar-nav .open .dropdown-menu > li > a:focus {
-        color: #ffffff;
+        color: #FFFFFF;
     }
     .navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a,
     .navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a:hover,
     .navbar-red .navbar-nav .open .dropdown-menu > .current_page_item > a:focus {
-        color: #ffffff;
+        color: #FFFFFF;
         background-color: #e13030;
     }
 }
@@ -337,4 +273,20 @@ img.aligncenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.text-center {
+    text-align: center;
 }

@@ -1,45 +1,21 @@
 <!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) | !(IE 8) ]><!-->
 <html <?php language_attributes(); ?>>
     <head>
     <meta charset="utf-8">
     <title><?php if (is_front_page()) {echo bloginfo('name');} else {echo get_the_title();} ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Custom Styles -->
     <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
-
-    <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-
-    <!-- Font Awesome Icons -->
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Font - Header: Comfortaa -->
-    <!-- <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'> -->
-
-    <!-- Font - Header: Varela Round -->
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-
-    <!-- Font - Body: Open Sans -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
   </head>
   <body>
   <nav>
-    <!-- Fixed navbar -->
     <div class="navbar navbar-red navbar-fixed-top" role="navigation">
 	<?php
 	  // Fix menu overlap bug..
@@ -59,9 +35,13 @@
                 <?php
                     if ( has_nav_menu( 'primary' ) ) {
                         wp_nav_menu( array( 
-                            'container' => false,
-                            'menu_class' => 'nav navbar-nav navbar-left',
-                            'theme_location' => 'primary'
+                            'container'         => false,
+                            'menu_class'        => 'nav navbar-nav navbar-left',
+                            'depth'             => 2,
+                            'container_id'      => 'bs-example-navbar-collapse-1',
+                            'theme_location'    => 'primary',
+                            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                            'walker'            => new wp_bootstrap_navwalker()
                         ) );
                     }
                     else {
@@ -70,12 +50,23 @@
                     <?php wp_list_pages(array('title_li' => '')); ?>
                 </ul>
                 <?php } ?>
-                <ul class="nav navbar-nav navbar-right social-icons">
-                    <li class="phone-number"><a>Call us at 704-752-1744</a></li>
-                    <li class="facebook"><a href="https://www.facebook.com/advanceicare"><i class="fa fa-facebook fa-lg"></i></a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a><i class="fa fa-phone fa-lg"></i> 704-752-1744</a></li>
                 </ul>
             </div>
-            <!--/.nav-collapse -->
+        <!--<?php
+            wp_nav_menu( array(
+                'menu'              => 'primary',
+                'theme_location'    => 'primary',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => 'bs-example-navbar-collapse-1',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                'walker'            => new wp_bootstrap_navwalker())
+            );
+        ?>-->
         </div>
     </div>
   </nav>

@@ -34,6 +34,7 @@ function register_my_menu() {
 }
 add_action( 'init', 'register_my_menu' );
 
+require_once('wp_bootstrap_navwalker.php');
 
 
 function unblemished_customize_register( $wp_customize ) {
