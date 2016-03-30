@@ -16,7 +16,7 @@
               </div>
               <div class="col-sm-2">
                   <h4 class="text-center">Social</h4>
-                  <p><i class="fa fa-google-plus fa-lg"></i> <i class="fa fa-facebook fa-lg"></i></p>
+                  <p><a href="https://plus.google.com/+AdvanceEyeCareCharlotte/about" style="text-decoration: none;"><i class="fa fa-google-plus fa-lg"></i> <a href="https://www.facebook.com/advanceicare"><i class="fa fa-facebook fa-lg"></i></a></p>
               </div>
           </div>
       <hr>
